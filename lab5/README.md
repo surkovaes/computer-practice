@@ -14,10 +14,14 @@
 
 ![3](https://github.com/surkovaes/computer-practice/blob/main/lab5/images/3.JPG)
 
-Содержимое файла package.json, создание файлов index.js и index.html, сборка проекта
+Содержимое файла package.json, создание файла index.js
 
 ![4](https://github.com/surkovaes/computer-practice/blob/main/lab5/images/4.JPG)
 
-Результат
+Создание файла index.html, сборка проекта
 
 ![5](https://github.com/surkovaes/computer-practice/blob/main/lab5/images/5.JPG)
+
+Результат
+
+![6](https://github.com/surkovaes/computer-practice/blob/main/lab5/images/6.JPG)
