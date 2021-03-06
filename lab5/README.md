@@ -8,7 +8,7 @@
 
 Содержимое файла package.json
 
-![2](https://github.com/surkovaes/computer-practice/blob/main/lab5/images/2.JPG)
+![2](https://github.com/surkovaes/computer-practice/blob/main/lab5/images/2.jpg)
 
 Добавление зависимости moment
 
