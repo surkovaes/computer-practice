@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Лабораторная работа 7, 8</title>
+  <meta charset="utf-8">
+ </head>
+ <body>
+  <article>
+    <h1>Лабораторная работа 7, 8</h1>
+    <h4>Автор: Елизавета Суркова 2ИВТ(2)</h4>
+  </article>
+   <script>{
+    function makeCanvas(x, y) {
+          const canvas = document.createElement('canvas'),
+                ctx = canvas.getContext('2d');
+          canvas.setAttribute('width', x);
+          canvas.setAttribute('height', y);
+          return { canvas, ctx };
+        }
+  
+        const { canvas, ctx } = makeCanvas(300, 300);
+        document.body.appendChild(canvas);
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = 'blue';
+  
+  	ctx.setTransform(0, -1, 1, 0, 20, 190);
+    
+    	ctx.beginPath();
+        ctx.moveTo(20, 20);
+        ctx.lineTo(70, 20);
+        ctx.moveTo(20, 20);
+  		ctx.lineTo(20, 70);
+  		ctx.lineTo(70, 70);
+  		ctx.moveTo(20, 70);
+        ctx.lineTo(20, 120);
+  		ctx.lineTo(70, 120);
+        ctx.moveTo(80, 120);
+  		ctx.lineTo(80, 115);
+  		ctx.stroke();
+  
+  		ctx.beginPath();
+        ctx.moveTo(90, 120);
+  		ctx.lineTo(140, 120);
+  		ctx.moveTo(150, 120);
+  		ctx.lineTo(150, 115);
+  		ctx.moveTo(90, 120);
+        ctx.lineTo(90, 20);
+  		ctx.lineTo(140, 20);
+  		ctx.stroke();
+  
+  		ctx.beginPath();
+        ctx.strokeStyle = 'red';
+  		ctx.moveTo(20, 130);
+  		ctx.quadraticCurveTo(80, 190, 150, 130);
+  		ctx.stroke(); 
+  } 
+  </script>
+ </body>
+</html>
