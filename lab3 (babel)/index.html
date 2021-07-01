@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>ЛР 3</title><meta charset="utf-8">
+ </head>
+ <body>
+  <article>
+    <h1>Лабораторная работа 3</h1>
+    <h2>Транспиляция с помощью Babel</h2>
+    <h4>Автор: Елизавета Суркова 2ИВТ(2)</h4>
+	  <a href="https://github.com/surkovaes/web-3sem/tree/master/Week%202/json_intro" target="_blank">Ссылка на папку с файлами</a>
+    <h3>Файл index.js</h3>
+    <pre><code>  
+      16 |> Math.sqrt |> console.log;
+    </code></pre>
+	  <h3>Файл package.json</h3>
+    <pre><code>  
+	{
+	  "name": "babel1",
+	  "version": "1.0.0",
+	  "main": "index.js",
+	  "license": "MIT",
+	  "devDependencies": {
+		"@babel/cli": "^7.12.17",
+		"@babel/core": "^7.12.17",
+		"@babel/plugin-proposal-pipeline-operator": "^7.12.13"
+	  }
+	  "scripts": {
+		"trans": "babel index.js -o ./src/index.js"
+	  }
+	}
+    </code></pre>
+	  <h3>Содержимое папки src</h3>
+	  <h3>Файл index.js</h3>
+    <pre><code>  
+	var _ref, _;
+
+	_ref = (_ = 16, Math.sqrt(_)), console.log(_ref);
+    </code></pre>
+  </article>
+ </body>
+</html>
