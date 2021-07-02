@@ -4,7 +4,7 @@
 
 Создание папки для проекта и установка зависимостей webpack и webpack-cli
 
-![1](https://github.com/surkovaes/computer-practice/blob/main/lab5/images/1.JPG)
+![1](images/1.JPG)
 
 Содержимое файла package.json
 
