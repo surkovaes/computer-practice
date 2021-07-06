@@ -55,5 +55,69 @@
      ctx.stroke(); 
   } 
   </script>
+  <article>
+	<h3>Определение функции для создания переменных, содержащих холст и контекст</h3>
+	<pre><code>  
+    function makeCanvas(x, y) {
+          const canvas = document.createElement('canvas'),
+                ctx = canvas.getContext('2d');
+          canvas.setAttribute('width', x);
+          canvas.setAttribute('height', y);
+          return { canvas, ctx };
+    }
+    </code></pre>
+	<h3>Вызов этой функции</h3>
+	<pre><code>  
+    const { canvas, ctx } = makeCanvas(300, 300);
+    </code></pre>
+	<h3>Добавление холста в дерево DOM</h3>
+	<pre><code>  
+    document.body.appendChild(canvas);
+    </code></pre>
+	<h3>Установка толщины и цвета линии</h3>
+	<pre><code>  
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = 'blue';
+    </code></pre>
+	<h3>Поворот на 90 градусов</h3>
+	<pre><code>  
+    ctx.setTransform(0, -1, 1, 0, 20, 190);
+    </code></pre>
+	<h3>Написание буквы "Е"</h3>
+	<pre><code>  
+    ctx.beginPath();
+    ctx.moveTo(20, 20);
+    ctx.lineTo(70, 20);
+    ctx.moveTo(20, 20);
+    ctx.lineTo(20, 70);
+    ctx.lineTo(70, 70);
+    ctx.moveTo(20, 70);
+    ctx.lineTo(20, 120);
+    ctx.lineTo(70, 120);
+    ctx.moveTo(80, 120);
+    ctx.lineTo(80, 115);
+    ctx.stroke();
+    </code></pre>
+	<h3>Написание буквы "С"</h3>
+	<pre><code>  
+    ctx.beginPath();
+    ctx.moveTo(90, 120);
+    ctx.lineTo(140, 120);
+    ctx.moveTo(150, 120);
+    ctx.lineTo(150, 115);
+    ctx.moveTo(90, 120);
+    ctx.lineTo(90, 20);
+    ctx.lineTo(140, 20);
+    ctx.stroke();
+    </code></pre>
+	<h3>Рисование с помощью кривой Безье дуги под инициалами</h3>
+	<pre><code>  
+    ctx.beginPath();
+    ctx.strokeStyle = 'red';
+    ctx.moveTo(20, 130);
+    ctx.quadraticCurveTo(80, 190, 150, 130);
+    ctx.stroke();
+    </code></pre>
+  </article>
  </body>
 </html>
