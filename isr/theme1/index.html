@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>ИСР 1.1</title><meta charset="utf-8">
+ </head>
+ <body>
+  <article>
+    <h1>ИСР Тема 1. Транспиляция и сборка проекта с использованием директив импорта и экспорта в код с модульностью CommonJS</h1>
+	<div style="font-size:110%;">
+	<a href="" target="_blank">Ссылка на папку с файлами</a>
+	<ol>
+	  <li>Создание проекта
+	    <pre style="background-color:rgb(240, 240, 240); font-size:120%;"><code>
+        yarn init -y
+	    </code></pre>
+	  </li>
+	  <li>Добавление зависимостей
+	    <pre style="background-color:rgb(240, 240, 240); font-size:120%;"><code>
+        yarn add -D babel-cli babel-preset-env
+	    </code></pre>
+	  </li>
+      <li>Настройка Babel (файл <code>.babelrc</code>)
+	    <pre style="background-color:rgb(240, 240, 240); font-size:120%;"><code>
+        echo '{"presets":["env"]}' > .babelrc
+	    </code></pre>
+	  </li>	
+      <li>Добавление библиотеки moment
+	    <pre style="background-color:rgb(240, 240, 240); font-size:120%;"><code>
+        yarn add moment
+	    </code></pre>
+	  </li>
+	  <li>Выполнение команды транспиляции
+	    <pre style="background-color:rgb(240, 240, 240); font-size:120%;"><code>
+        babel-node ./src/index.js
+	    </code></pre>
+	  </li>
+	  <li>Сборка проекта
+	    <pre style="background-color:rgb(240, 240, 240); font-size:120%;"><code>
+        babel ./src -d ./lib
+	    </code></pre>
+	  </li>
+	</ol>
+	Файлы <b>main.js</b> и <b>name.js</b> находятся в отношении нативной модульности<br><br>
+    Исходные файлы расположены в директории <b>src</b>, транспилированные - в директории <b>lib</b><br><br>
+	</div>
+  </article>
+ </body>
+</html>
