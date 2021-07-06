@@ -6,13 +6,13 @@
  <body>
   <article>
     <h1>ИСР Тема 3. Проектирование веб-базы данных и разработка приложения на основе фреймворка Express 
-	с реализацией маршрутизации и операций CRUD над простой БД с обработкой запросов REST</h1>
-	<div style="font-size:110%;">
-	<a href="" target="_blank">Ссылка на папку с файлами</a><br><br>
-	Для разработки базы данных на MongoDB можно использовать MongoDB Cloud.<br><br>
-	MongoDB не требует определения схемы документа, что позволяет вносить изменения в структуру документа при добавлении или редактировании данных.<br><br>
-	Схема может иметь следующий вид:
-	<pre style="background-color:rgb(240, 240, 240); font-size:120%;"><code>
+    с реализацией маршрутизации и операций CRUD над простой БД с обработкой запросов REST</h1>
+    <div style="font-size:110%;">
+    <a href="https://github.com/surkovaes/computer-practice/tree/main/isr/theme3" target="_blank">Ссылка на папку с файлами</a><br><br>
+    Для разработки базы данных на MongoDB можно использовать MongoDB Cloud.<br><br>
+    MongoDB не требует определения схемы документа, что позволяет вносить изменения в структуру документа при добавлении или редактировании данных.<br><br>
+    Схема может иметь следующий вид:
+    <pre style="background-color:rgb(240, 240, 240); font-size:120%;"><code>
     {
       name: String,
       type: String,
@@ -21,26 +21,26 @@
         unit: String
       }
     }
-	</code></pre>
-	<img src="isr3.png"><br><br>
-	Реализован REST API для выполнения операций CRUD в базе данных MongoDB.<br>
-	Приложение реализовано с использованием Express, bodyParser, Mongoose.<br><br>
-	Реализованы следующие операции:<br>
-	<ul>
-	  <li><code>GET /products</code> - получение списка продуктов</li>
-	  <li><code>POST /products/new</code> - добавление нового продукта</li>
-	  <li><code>POST /products/update/:id</code> - обновление информации о продукте по ID</li>
-	  <li><code>POST /products/delete/:id</code> - удаление информации о продукте по ID</li>
-	</ul>
-	При отправке запросов для добавления и обновления продукта информация о нём передаётся в теле POST-запроса.<br>
+    </code></pre>
+    <img src="isr3.png"><br><br>
+    Реализован REST API для выполнения операций CRUD в базе данных MongoDB.<br>
+    Приложение реализовано с использованием Express, bodyParser, Mongoose.<br><br>
+    Реализованы следующие операции:<br>
+    <ul>
+      <li><code>GET /products</code> - получение списка продуктов</li>
+      <li><code>POST /products/new</code> - добавление нового продукта</li>
+      <li><code>POST /products/update/:id</code> - обновление информации о продукте по ID</li>
+      <li><code>POST /products/delete/:id</code> - удаление информации о продукте по ID</li>
+    </ul>
+    При отправке запросов для добавления и обновления продукта информация о нём передаётся в теле POST-запроса.<br>
     Сервер возвращает ответ - статус выполнения операции в формате JSON. Пример ответа сервера (добавление данных):
-	<pre style="background-color:rgb(240, 240, 240); font-size:120%;"><code>
+   <pre style="background-color:rgb(240, 240, 240); font-size:120%;"><code>
     {
-	  "status": "success"
+      "status": "success"
     }
-	</code></pre>
-	Пример ответа сервера на GET-запрос:
-	<pre style="background-color:rgb(240, 240, 240); font-size:120%;"><code>
+    </code></pre>
+    Пример ответа сервера на GET-запрос:
+    <pre style="background-color:rgb(240, 240, 240); font-size:120%;"><code>
   [
     {
       "amount": {
@@ -70,8 +70,8 @@
       "type": "Berries"
     }
   ]
-	</code></pre>
-	</div>
+    </code></pre>
+    </div>
   </article>
  </body>
 </html>
