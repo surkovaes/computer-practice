@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>ВСР 4.3</title><meta charset="utf-8">
+ </head>
+ <body>
+  <article>
+    <h1>ВСР Тема 4. Развёртывание веб-ресурса на платформе vscale.io с использованием Docker</h1>
+    <div style="font-size:110%;">
+    Для развёртывания веб-ресурса на платформе <b>vscale.io</b> необходимо создать аккаунт.<br><br>
+    После создания аккаунта необходимо создать сервер с готовым образом <b>Docker</b>:<br><br>
+	<img src="1.png"><br><br>
+    После создания сервера необходимо подключиться к нему по SSH с использования логина и пароля или SSH-ключа.<br><br>
+    Веб-ресурсом может являться сайт на CMS Ghost.js, которую можно установить с помощью Docker-контейнера.<br><br>
+    Для установки контейнера необходимо выполнить команду:
+	<pre style="background-color:rgb(240, 240, 240); font-size:120%;"><code>
+    docker pull ghost
+    </code></pre>
+	Для запуска Ghost необходимо выполнить команду:
+	<pre style="background-color:rgb(240, 240, 240); font-size:120%;"><code>
+    docker run -d --name some-ghost -e url=http://localhost:3001 -p 3001:2368 ghost
+    </code></pre>
+	После этого Ghost будет доступен по адресу <code>server_ip:3001</code><br><br>
+	<img src="2.png"><br><br>
+	Панель администратора доступна по адресу <code>server_ip:3001/ghost</code><br><br>
+	<img src="3.png">
+    </div>
+  </article>
+ </body>
+</html>
